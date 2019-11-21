@@ -19,17 +19,17 @@ namespace JakubKazimierskiLab1
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
+            MessageBox.Show("In this table is author name.");
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("This program is simple timer, which can change colors");
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-
+            MessageBox.Show("This program is simple timer, which can change colors");
         }
     }
 }

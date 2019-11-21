@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.LabelWithName = new System.Windows.Forms.Label();
             this.TableofTimer = new System.Windows.Forms.TableLayoutPanel();
             this.Hours = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.StopButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.ColorButton = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.TableofTimer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -81,41 +83,45 @@
             // 
             this.Hours.AutoSize = true;
             this.Hours.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Hours.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Hours.Location = new System.Drawing.Point(3, 0);
             this.Hours.Name = "Hours";
             this.Hours.Size = new System.Drawing.Size(85, 100);
             this.Hours.TabIndex = 0;
-            this.Hours.Text = "label1";
+            this.Hours.Text = "00";
             // 
             // MinutesTable
             // 
             this.MinutesTable.AutoSize = true;
             this.MinutesTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MinutesTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.MinutesTable.Location = new System.Drawing.Point(94, 0);
             this.MinutesTable.Name = "MinutesTable";
             this.MinutesTable.Size = new System.Drawing.Size(85, 100);
             this.MinutesTable.TabIndex = 1;
-            this.MinutesTable.Text = "label1";
+            this.MinutesTable.Text = "00";
             // 
             // SecondsTable
             // 
             this.SecondsTable.AutoSize = true;
             this.SecondsTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SecondsTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.SecondsTable.Location = new System.Drawing.Point(185, 0);
             this.SecondsTable.Name = "SecondsTable";
             this.SecondsTable.Size = new System.Drawing.Size(85, 100);
             this.SecondsTable.TabIndex = 2;
-            this.SecondsTable.Text = "label1";
+            this.SecondsTable.Text = "00";
             // 
             // HunSecondsTable
             // 
             this.HunSecondsTable.AutoSize = true;
             this.HunSecondsTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HunSecondsTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.HunSecondsTable.Location = new System.Drawing.Point(276, 0);
             this.HunSecondsTable.Name = "HunSecondsTable";
             this.HunSecondsTable.Size = new System.Drawing.Size(86, 100);
             this.HunSecondsTable.TabIndex = 3;
-            this.HunSecondsTable.Text = "label1";
+            this.HunSecondsTable.Text = "00";
             // 
             // tableLayoutPanel1
             // 
@@ -187,6 +193,10 @@
             this.ColorButton.Text = "Change Color";
             this.ColorButton.UseVisualStyleBackColor = true;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,9 +206,10 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.TableofTimer);
             this.Controls.Add(this.LabelWithName);
-            this.MinimumSize = new System.Drawing.Size(414, 38);
+            this.MaximumSize = new System.Drawing.Size(414, 468);
+            this.MinimumSize = new System.Drawing.Size(414, 468);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Simple Timer";
             this.TableofTimer.ResumeLayout(false);
             this.TableofTimer.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -221,6 +232,7 @@
         private System.Windows.Forms.Button StartButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button ColorButton;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
