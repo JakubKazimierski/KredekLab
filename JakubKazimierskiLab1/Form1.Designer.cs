@@ -35,16 +35,16 @@
             this.MinutesTable = new System.Windows.Forms.Label();
             this.SecondsTable = new System.Windows.Forms.Label();
             this.HunSecondsTable = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.TableOfButons = new System.Windows.Forms.TableLayoutPanel();
             this.StartButton = new System.Windows.Forms.Button();
             this.PauseButton = new System.Windows.Forms.Button();
             this.StopButton = new System.Windows.Forms.Button();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.TableOfColors = new System.Windows.Forms.TableLayoutPanel();
             this.ColorButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.TableofTimer.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.TableOfButons.SuspendLayout();
+            this.TableOfColors.SuspendLayout();
             this.SuspendLayout();
             // 
             // LabelWithName
@@ -123,23 +123,23 @@
             this.HunSecondsTable.TabIndex = 3;
             this.HunSecondsTable.Text = "00";
             // 
-            // tableLayoutPanel1
+            // TableOfButons
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.TableOfButons.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
-            this.tableLayoutPanel1.Controls.Add(this.StopButton, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.PauseButton, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.StartButton, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 178);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(362, 100);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.TableOfButons.ColumnCount = 3;
+            this.TableOfButons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.TableOfButons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.TableOfButons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
+            this.TableOfButons.Controls.Add(this.StopButton, 2, 0);
+            this.TableOfButons.Controls.Add(this.PauseButton, 1, 0);
+            this.TableOfButons.Controls.Add(this.StartButton, 0, 0);
+            this.TableOfButons.Location = new System.Drawing.Point(21, 178);
+            this.TableOfButons.Name = "TableOfButons";
+            this.TableOfButons.RowCount = 1;
+            this.TableOfButons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableOfButons.Size = new System.Drawing.Size(362, 100);
+            this.TableOfButons.TabIndex = 2;
             // 
             // StartButton
             // 
@@ -171,17 +171,17 @@
             this.StopButton.Text = "Stop";
             this.StopButton.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel2
+            // TableOfColors
             // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.ColorButton, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(21, 284);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(359, 100);
-            this.tableLayoutPanel2.TabIndex = 3;
+            this.TableOfColors.ColumnCount = 1;
+            this.TableOfColors.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TableOfColors.Controls.Add(this.ColorButton, 0, 0);
+            this.TableOfColors.Location = new System.Drawing.Point(21, 284);
+            this.TableOfColors.Name = "TableOfColors";
+            this.TableOfColors.RowCount = 1;
+            this.TableOfColors.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TableOfColors.Size = new System.Drawing.Size(359, 100);
+            this.TableOfColors.TabIndex = 3;
             // 
             // ColorButton
             // 
@@ -196,14 +196,15 @@
             // timer1
             // 
             this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 430);
-            this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.TableOfColors);
+            this.Controls.Add(this.TableOfButons);
             this.Controls.Add(this.TableofTimer);
             this.Controls.Add(this.LabelWithName);
             this.MaximumSize = new System.Drawing.Size(414, 468);
@@ -212,8 +213,8 @@
             this.Text = "Simple Timer";
             this.TableofTimer.ResumeLayout(false);
             this.TableofTimer.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
+            this.TableOfButons.ResumeLayout(false);
+            this.TableOfColors.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -226,11 +227,11 @@
         private System.Windows.Forms.Label SecondsTable;
         private System.Windows.Forms.Label MinutesTable;
         private System.Windows.Forms.Label Hours;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel TableOfButons;
         private System.Windows.Forms.Button StopButton;
         private System.Windows.Forms.Button PauseButton;
         private System.Windows.Forms.Button StartButton;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel TableOfColors;
         private System.Windows.Forms.Button ColorButton;
         private System.Windows.Forms.Timer timer1;
     }
