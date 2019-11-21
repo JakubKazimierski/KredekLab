@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.LabelWithName = new System.Windows.Forms.Label();
             this.TableofTimer = new System.Windows.Forms.TableLayoutPanel();
-            this.Hours = new System.Windows.Forms.Label();
+            this.HoursTable = new System.Windows.Forms.Label();
             this.MinutesTable = new System.Windows.Forms.Label();
             this.SecondsTable = new System.Windows.Forms.Label();
             this.HunSecondsTable = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@
             this.TableofTimer.Controls.Add(this.HunSecondsTable, 3, 0);
             this.TableofTimer.Controls.Add(this.SecondsTable, 2, 0);
             this.TableofTimer.Controls.Add(this.MinutesTable, 1, 0);
-            this.TableofTimer.Controls.Add(this.Hours, 0, 0);
+            this.TableofTimer.Controls.Add(this.HoursTable, 0, 0);
             this.TableofTimer.Location = new System.Drawing.Point(21, 72);
             this.TableofTimer.Name = "TableofTimer";
             this.TableofTimer.RowCount = 1;
@@ -79,16 +79,16 @@
             this.TableofTimer.Size = new System.Drawing.Size(365, 100);
             this.TableofTimer.TabIndex = 1;
             // 
-            // Hours
+            // HoursTable
             // 
-            this.Hours.AutoSize = true;
-            this.Hours.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Hours.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Hours.Location = new System.Drawing.Point(3, 0);
-            this.Hours.Name = "Hours";
-            this.Hours.Size = new System.Drawing.Size(85, 100);
-            this.Hours.TabIndex = 0;
-            this.Hours.Text = "00";
+            this.HoursTable.AutoSize = true;
+            this.HoursTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HoursTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.HoursTable.Location = new System.Drawing.Point(3, 0);
+            this.HoursTable.Name = "HoursTable";
+            this.HoursTable.Size = new System.Drawing.Size(85, 100);
+            this.HoursTable.TabIndex = 0;
+            this.HoursTable.Text = "00";
             // 
             // MinutesTable
             // 
@@ -150,6 +150,7 @@
             this.StartButton.TabIndex = 0;
             this.StartButton.Text = "Start";
             this.StartButton.UseVisualStyleBackColor = true;
+            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // PauseButton
             // 
@@ -170,6 +171,7 @@
             this.StopButton.TabIndex = 2;
             this.StopButton.Text = "Stop";
             this.StopButton.UseVisualStyleBackColor = true;
+            this.StopButton.Click += new System.EventHandler(this.StopButton_Click);
             // 
             // TableOfColors
             // 
@@ -226,7 +228,7 @@
         private System.Windows.Forms.Label HunSecondsTable;
         private System.Windows.Forms.Label SecondsTable;
         private System.Windows.Forms.Label MinutesTable;
-        private System.Windows.Forms.Label Hours;
+        private System.Windows.Forms.Label HoursTable;
         private System.Windows.Forms.TableLayoutPanel TableOfButons;
         private System.Windows.Forms.Button StopButton;
         private System.Windows.Forms.Button PauseButton;

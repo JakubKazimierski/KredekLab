@@ -28,6 +28,8 @@ namespace JakubKazimierskiLab1
         public Form1()
         {
             InitializeComponent();
+
+            seconds = minutes = hours = 0;
         }
 
 
@@ -56,9 +58,58 @@ namespace JakubKazimierskiLab1
         }
         #endregion
 
+
+        #region Timer system of work
+
+        /// <summary>
+        /// Method which makes timer run on visible effect
+        /// </summary>
+        /// <param name="sender">The event sender</param>
+        /// <param name="e">The event argument</param>
         private void timer1_Tick(object sender, EventArgs e)
         {
+            //method of timer work
+            seconds++;
+
+            if ( seconds > 59 )
+            {
+                minutes++;
+                seconds = 0;
+            }
+            if (minutes > 59 )
+            {
+
+                hours++;
+                minutes = 0;
+            }
+
+            HoursTable.Text = hours.ToString();
+            MinutesTable.Text = minutes.ToString();
+            SecondsTable.Text = seconds.ToString();
 
         }
+
+        #endregion
+
+        #region Buttons of Timer
+
+        /// <summary>
+        /// Methods of timer start, and stop, and also running
+        /// </summary>
+        /// <param name="sender">The event sender</param>
+        /// <param name="e">The event argument</param>
+        private void StartButton_Click(object sender, EventArgs e)
+        {
+            //start timer
+            timer1.Start();
+        }
+
+        private void StopButton_Click(object sender, EventArgs e)
+        {
+            //stop timer
+            timer1.Stop();
+        }
+        #endregion
+
     }
 }
