@@ -1,6 +1,6 @@
 ﻿namespace JakubKazimierskiLab1
 {
-    partial class Form1
+    partial class TimerBackground
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -51,12 +51,12 @@
             // 
             this.LabelWithName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LabelWithName.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F);
+            this.LabelWithName.Font = new System.Drawing.Font("Times New Roman", 23.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.LabelWithName.Location = new System.Drawing.Point(12, 9);
             this.LabelWithName.Name = "LabelWithName";
             this.LabelWithName.Size = new System.Drawing.Size(374, 60);
             this.LabelWithName.TabIndex = 0;
-            this.LabelWithName.Text = "Jakub Kazimierski";
+            this.LabelWithName.Text = "Jakub Kazimierski - Timer";
             this.LabelWithName.Click += new System.EventHandler(this.label1_Click);
             // 
             // TableofTimer
@@ -146,35 +146,38 @@
             // 
             // StartButton
             // 
+            this.StartButton.BackColor = System.Drawing.SystemColors.ControlDark;
             this.StartButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.StartButton.Location = new System.Drawing.Point(3, 3);
             this.StartButton.Name = "StartButton";
             this.StartButton.Size = new System.Drawing.Size(114, 94);
             this.StartButton.TabIndex = 0;
             this.StartButton.Text = "Start";
-            this.StartButton.UseVisualStyleBackColor = true;
+            this.StartButton.UseVisualStyleBackColor = false;
             this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // PauseButton
             // 
+            this.PauseButton.BackColor = System.Drawing.SystemColors.ControlDark;
             this.PauseButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PauseButton.Location = new System.Drawing.Point(123, 3);
             this.PauseButton.Name = "PauseButton";
             this.PauseButton.Size = new System.Drawing.Size(114, 94);
             this.PauseButton.TabIndex = 1;
             this.PauseButton.Text = "Pause";
-            this.PauseButton.UseVisualStyleBackColor = true;
+            this.PauseButton.UseVisualStyleBackColor = false;
             this.PauseButton.Click += new System.EventHandler(this.PauseButton_Click);
             // 
             // StopButton
             // 
+            this.StopButton.BackColor = System.Drawing.SystemColors.ControlDark;
             this.StopButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.StopButton.Location = new System.Drawing.Point(243, 3);
             this.StopButton.Name = "StopButton";
             this.StopButton.Size = new System.Drawing.Size(116, 94);
             this.StopButton.TabIndex = 2;
             this.StopButton.Text = "Stop";
-            this.StopButton.UseVisualStyleBackColor = true;
+            this.StopButton.UseVisualStyleBackColor = false;
             this.StopButton.Click += new System.EventHandler(this.StopButton_Click);
             // 
             // TableOfColors
@@ -191,22 +194,25 @@
             // 
             // ColorButton
             // 
+            this.ColorButton.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ColorButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ColorButton.Location = new System.Drawing.Point(3, 3);
             this.ColorButton.Name = "ColorButton";
             this.ColorButton.Size = new System.Drawing.Size(353, 94);
             this.ColorButton.TabIndex = 0;
             this.ColorButton.Text = "Change Color";
-            this.ColorButton.UseVisualStyleBackColor = true;
+            this.ColorButton.UseVisualStyleBackColor = false;
+            this.ColorButton.Click += new System.EventHandler(this.ColorButton_Click);
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Form1
+            // TimerBackground
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(398, 430);
             this.Controls.Add(this.TableOfColors);
             this.Controls.Add(this.TableOfButons);
@@ -214,7 +220,7 @@
             this.Controls.Add(this.LabelWithName);
             this.MaximumSize = new System.Drawing.Size(414, 468);
             this.MinimumSize = new System.Drawing.Size(414, 468);
-            this.Name = "Form1";
+            this.Name = "TimerBackground";
             this.Text = "Simple Timer";
             this.TableofTimer.ResumeLayout(false);
             this.TableofTimer.PerformLayout();

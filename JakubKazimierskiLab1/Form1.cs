@@ -10,27 +10,29 @@ using System.Windows.Forms;
 
 namespace JakubKazimierskiLab1
 {
-    public partial class Form1 : Form
+    public partial class TimerBackground : Form
     {
         /// <summary>
         /// Simple timer
         /// </summary>
 
-        #region Variables of time
+        #region Variables
 
         int seconds;
         int minutes;
         int hours;
         int micro;
-
+        Random r;
         #endregion
 
 
-        public Form1()
+        public TimerBackground()
         {
             InitializeComponent();
 
             micro = seconds = minutes = hours = 0;
+            
+            r = new Random();
         }
 
 
@@ -123,7 +125,12 @@ namespace JakubKazimierskiLab1
             MinutesTable.Text = appendZero(minutes);
             SecondsTable.Text = appendZero(seconds);
             HunSecondsTable.Text = appendZeroAfter(micro);
-
+            
+            //reset color for default
+            StartButton.BackColor = Color.DarkGray;
+            PauseButton.BackColor = Color.DarkGray;
+            StopButton.BackColor = Color.DarkGray;
+            LabelWithName.ForeColor = Color.Black;
         }
         #endregion
 
@@ -152,8 +159,29 @@ namespace JakubKazimierskiLab1
                        
         }
 
+
         #endregion
 
+        #region Color methods
+        /// <summary>
+        /// Method to change colors of components
+        /// </summary>
+        /// <param name="sender">The event sender</param>
+        /// <param name="e">The event argument</param>
+        private void ColorButton_Click(object sender, EventArgs e)
+        {
+            LabelWithName.ForeColor = Color.FromArgb(r.Next(0, 256),
+         r.Next(0, 256), r.Next(0, 256));
+            StartButton.BackColor = Color.FromArgb(r.Next(0, 256),
+         r.Next(0, 256), r.Next(0, 256));
+            PauseButton.BackColor = Color.FromArgb(r.Next(0, 256),
+         r.Next(0, 256), r.Next(0, 256));
+            StopButton.BackColor = Color.FromArgb(r.Next(0, 256),
+         r.Next(0, 256), r.Next(0, 256));
 
+
+        }
+        #endregion
     }
+
 }
