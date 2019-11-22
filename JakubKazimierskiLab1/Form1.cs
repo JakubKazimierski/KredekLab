@@ -21,6 +21,7 @@ namespace JakubKazimierskiLab1
         int seconds;
         int minutes;
         int hours;
+        int micro;
 
         #endregion
 
@@ -29,7 +30,7 @@ namespace JakubKazimierskiLab1
         {
             InitializeComponent();
 
-            seconds = minutes = hours = 0;
+            micro = seconds = minutes = hours = 0;
         }
 
 
@@ -69,8 +70,13 @@ namespace JakubKazimierskiLab1
         private void timer1_Tick(object sender, EventArgs e)
         {
             //method of timer work
-            seconds++;
 
+            micro++;
+            if (micro > 9)
+            {
+                seconds++;
+                micro = 0;
+            }
             if ( seconds > 59 )
             {
                 minutes++;
@@ -83,10 +89,10 @@ namespace JakubKazimierskiLab1
                 minutes = 0;
             }
 
-            HoursTable.Text = hours.ToString();
-            MinutesTable.Text = minutes.ToString();
-            SecondsTable.Text = seconds.ToString();
-
+            HoursTable.Text = appendZero(hours);
+            MinutesTable.Text = appendZero(minutes);
+            SecondsTable.Text = appendZero(seconds);
+            HunSecondsTable.Text = appendZeroAfter(micro);
         }
 
         #endregion
@@ -104,12 +110,50 @@ namespace JakubKazimierskiLab1
             timer1.Start();
         }
 
-        private void StopButton_Click(object sender, EventArgs e)
-        {
-            //stop timer
+        private void PauseButton_Click(object sender, EventArgs e)
+        {   //stop timer but not reset
             timer1.Stop();
         }
+        private void StopButton_Click(object sender, EventArgs e)
+        {
+            //stop timer and reset
+            timer1.Stop();
+            micro = seconds = minutes = hours = 0;
+            HoursTable.Text = appendZero(hours);
+            MinutesTable.Text = appendZero(minutes);
+            SecondsTable.Text = appendZero(seconds);
+            HunSecondsTable.Text = appendZeroAfter(micro);
+
+        }
         #endregion
+
+        #region Helper methods
+        /// <summary>
+        /// method to make output like 00:00:00:00 not like 0:0:0:0
+        /// </summary>
+        /// <param name="str">The event sender</param>
+        /// <returns>The even argument</returns>
+        private string appendZero(double str)
+        {
+            if (str <= 9)
+            {
+                return "0" + str;
+            }
+            else
+            {
+                return str.ToString();
+            }
+
+        }
+        private string appendZeroAfter(double str)
+        {
+         
+                return   str + "0" ;
+                       
+        }
+
+        #endregion
+
 
     }
 }
